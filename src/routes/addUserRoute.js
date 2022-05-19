@@ -23,8 +23,8 @@ export const addUserRoute = {
         const error = {...validationErr};
 
         if(error.name==="" && error.phoneNum ==="" && error.email==="" && error.password ==="" ){
-        await insertUser(newUser);
-        res.status(200).json('ok');
+            await insertUser(newUser);
+            res.status(200).json('ok');
         } else {
             res.status(406).json(error);
         }
